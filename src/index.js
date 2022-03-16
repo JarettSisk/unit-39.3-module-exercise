@@ -1,17 +1,17 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+// imports
+import fruits from './foods.js';
+import {choice, remove} from './helpers.js';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+// 1.
+let randomFruit = choice(fruits);
+// 2
+console.log(`Id like one ${randomFruit}, please`);
+// 3.
+console.log(`Here you go: ${randomFruit}`);
+// 4.
+console.log(`Delicious! May I have another?`);
+// 5.
+remove(fruits, randomFruit);
+// 6.
+console.log(`Im sorry, were all out. We have ${fruits.length} fruits left`);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
